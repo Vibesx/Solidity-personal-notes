@@ -13,4 +13,4 @@ Better understand what network.provider is
 Other notes:
 
 In order to show your LINK wallet in your Metamask account, you go to Chainlink docs -> LINK Token Contracts -> <your_prefered_network> (in my case Rinkeby) and copy address -> in Metamask go to Assets -> Import tokens and copy the address in here; 
-this is the long way, as the Chainlink docs has an "Add to wallet" option now that does all the copying for you (added this long way for future reference)
+this is the long way, as the Chainlink docs has an "Add to wallet" option now that does all the copying for you (added this long way for future reference)  
