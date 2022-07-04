@@ -1,0 +1,48 @@
+Solidity course commands:
+
+General:
+
+node filename.js >>> run filename.js
+yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol  >>> compile solidity file
+yarn add --dev prettier prettier-plugin-solidity >>> add prettier to project
+yarn add --dev dotenv >>> add dotenv to project, for manipulating .env files and env properties
+yarn add --dev hardhat-gas-reporter >>> extension for tests to display gas costs
+yarn add --dev solidity-coverage >>> plugin for test coverage of .sol files
+yarn add --dev hardhat-deploy >>> deploy plugin
+yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers >>> replaces @nomiclabs/hardhat-ethers with hardhat-deploy-ethers
+yarn global add hardhat-shorthand >>> adds a package that allows us to write hh instead of hardhat in terminal commands; also provides autocomplete
+
+Hardhat:
+NOTE: npm and npx commands are both similar to yarn so they can both be replaced with yarn
+
+yarn init >>> initiate a project (similar to npm init)
+yarn add --dev hardhat >>> initiate hardhat project
+yarn hardhat >>> create a hardhat project if none is present in current folder (if this doesn't work, check troubleshoot at 8:30:30 in video)
+yarn hardhat >>> if project exists in folder it can be used as a sort of help to get a list of possible actions
+yarn hardhat run <file> >>> runs file
+yarn hardhat run <file> --network <network_name> >>> runs file on a certain network
+yarn hardhat verify >>> allows us to verify contract on Etherscan once we add the etherscan plugin to hardhat and set it up (adding etherscan in hardhat.config.js, in exports, together with the API Key taken from etherscan website); check Hardhat docs for more details on syntax
+yarn hardhat node >>> creates a hardhat node similar to Ganache, so that it doesn't get reset after each time we run a script
+yarn hardhat console (--network <network_name>) >>> opens up hardhat console in the terminal; in the console we can write JS code like we would do in a JS script
+yarn hardhat clean >>> cleans artifacts and cache folders (similar to mvn clean)
+yarn hardhat compile >>> compiles the entire project (similar to mvn install)
+yarn hardhat test >>> runs tests in the test folder
+yarn hardhat test --grep <description> >>> run only tests that contain <description> in their description; NOTE: case sensitive
+yarn hardhat coverage >>> generates a test coverage report; requires solidity-coverage plugin
+yarn hardhat deploy >>> deploy contracts (requires hardhat-deploy plugin)
+yarn hardhat deploy --tags <tag> >>> deploy only scripts that have tag <tag>
+
+
+
+Other:
+
+yarn solhint <sol_filename>/*.sol (for all files ending in .sol) >>> linting plugin that verifies code; the process of linting is an analysis of the file for possible errors or bad practices (warnings); solhint is for Solidity and for Javascript there is ESLint
+
+
+Initial project setup:
+
+yarn add --dev hardhat
+yarn hardhat -> choose one of the options to create new project
+// add a bunch of useful dependencies; can be adjusted:
+yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv
+yarn hardhat compile after creating contract (.sol file)
