@@ -8,6 +8,8 @@ Hardhat network reference >>> http://hardhat.org/hardhat-networkk/reference/
 callstatic
 Better understand what network.provider is
 Listening to contract events on the frontend
+AAVE Liquidation
+aTokens
 
 
 
@@ -31,3 +33,9 @@ DeFi
 Optional stuff to learn/consolidate:
 CSS, Bootstrap
 Short selling and Margin trading
+
+Note on ERC20 protocols (ex: AAVE):
+When we send ERC1 tokens to this protocol, like ETH or Polygon, they get wrapped in something called WETH (Wrapped ETH)
+In order to manually get WETH into our wallet, we can go to the Wrapped Ether contract on the testnet of our choice (Rinkeby is 0xc778417e063141139fce010982780140aa0cd5ab), Contract tab and Write Contract and call the deposit() function with our desired amount (need to connect wallet 1st!)
+Afterwards, we check if the transaction went through and if it did, we can add the Wrapped Ether contract address to our wallet by going to Assets -> Import tokens and copying in the address (0xc778417e063141139fce010982780140aa0cd5ab in our example)
+If we want to withdraw our tokens, we do the same as we did with deposit(), but using withdraw() function
