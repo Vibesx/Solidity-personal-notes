@@ -1,6 +1,7 @@
 Solidity course commands:
 
 General:
+NOTE: --dev adds dependencies that are only used for dev purposes (ex: prettier); without --dev, you add dependencies that are needed for the frontend end product (i.e.: reactJS, nextJS, etc)
 
 node filename.js >>> run filename.js
 yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol  >>> compile solidity file
@@ -11,6 +12,10 @@ yarn add --dev solidity-coverage >>> plugin for test coverage of .sol files
 yarn add --dev hardhat-deploy >>> deploy plugin
 yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers >>> replaces @nomiclabs/hardhat-ethers with hardhat-deploy-ethers
 yarn global add hardhat-shorthand >>> adds a package that allows us to write hh instead of hardhat in terminal commands; also provides autocomplete
+yarn add react react-dom moralis react-moralis >>> add react and react-moralis
+yarn add web3uikit >>> adds web3uikit to project
+yarn add --dev tailwindcss postcss autoprefixer >>> install tailwindcss
+yarn add --dev @openzeppelin/contracts >>> add OpenZeppelin contracts package to our project
 
 Hardhat:
 NOTE: npm and npx commands are both similar to yarn so they can both be replaced with yarn
@@ -32,6 +37,17 @@ yarn hardhat coverage >>> generates a test coverage report; requires solidity-co
 yarn hardhat deploy >>> deploy contracts (requires hardhat-deploy plugin)
 yarn hardhat deploy --tags <tag> >>> deploy only scripts that have tag <tag>
 
+Frontend:
+
+NextJS:
+yarn create next-app (.) >>> creates a nextapp project (add . for current folder)
+yarn run dev >>> run app
+yarn build >> creates and optimized production build
+yarn next export >>> generates static code; creates an out folder with all the files
+
+TailwindCSS:
+yarn tailwindcss init -p >>> initiates tailwindcss in our project
+
 
 
 Other:
@@ -45,4 +61,23 @@ yarn add --dev hardhat
 yarn hardhat -> choose one of the options to create new project
 // add a bunch of useful dependencies; can be adjusted:
 yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv
-yarn hardhat compile after creating contract (.sol file)
+yarn hardhat compile -> after creating contract (.sol file)
+
+Hardhat Starter Kit:
+git clone https://github.com/smartcontractkit/hardhat-starter-kit
+
+
+
+VSCode Installed plugins:
+
+Solidity + Hardhat
+JSON Tools
+Live Server
+PostCSS Lanugage Support
+Prettier - Code formatter
+Remote Development
+Remote - WSL
+Remote - SSH
+Remote - Containers
+
+

@@ -7,10 +7,27 @@ Storage - check out github @ PatrickAlphaC/hardhat-fund-me-fcc   /contracts/exam
 Hardhat network reference >>> http://hardhat.org/hardhat-networkk/reference/
 callstatic
 Better understand what network.provider is
+Listening to contract events on the frontend
 
 
 
 Other notes:
 
 In order to show your LINK wallet in your Metamask account, you go to Chainlink docs -> LINK Token Contracts -> <your_prefered_network> (in my case Rinkeby) and copy address -> in Metamask go to Assets -> Import tokens and copy the address in here; 
-this is the long way, as the Chainlink docs has an "Add to wallet" option now that does all the copying for you (added this long way for future reference)  
+this is the long way, as the Chainlink docs has an "Add to wallet" option now that does all the copying for you (added this long way for future reference) 
+
+Fleek: 
+Build commands for yarn:  yarn && yarn run build && yarn next export 
+
+
+
+Stuff to learn: 
+ReactJS >>> https://www.youtube.com/watch?v=bMknfKXIFA8&ab_channel=freeCodeCamp.org    ~12h
+NextJS >>> https://www.youtube.com/watch?v=mTz0GXj8NN0&ab_channel=TraversyMedia   ~1h
+How to Connect your Smart Contracts to Metamask >>> https://www.youtube.com/watch?v=pdsYCkUWrgQ&ab_channel=PatrickCollins   ~1h
+DeFi
+
+
+Optional stuff to learn/consolidate:
+CSS, Bootstrap
+Short selling and Margin trading

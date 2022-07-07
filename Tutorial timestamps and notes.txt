@@ -11,6 +11,8 @@ Artifacts troubleshooting: 9:10:00
 
 Possible error with nonce (nonce too high) in UI: 13:19:00
 
+IPFS & Filecoin: 18:32:00
+
 
 
 
@@ -19,3 +21,7 @@ NOTES:
 An optimisation for gas cost is to replace require(<condition>, <message>) with error codes and throws (if else throw) because the message stored in the require takes a lot of gas
 
 When building Dapps, you usually have 2 repos: one for the smart contracs, other for the frontend/website
+
+
+
+19:21:50
