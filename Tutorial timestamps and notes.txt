@@ -13,6 +13,12 @@ Possible error with nonce (nonce too high) in UI: 13:19:00
 
 IPFS & Filecoin: 18:32:00
 
+Base64: 22:12:20
+
+Encoding, Opcodes, Calls: 22:16:30
+
+Troubleshooting: Resetting the Local Chain (Moralis): 1:01:58:50
+
 
 
 

@@ -16,6 +16,9 @@ yarn add react react-dom moralis react-moralis >>> add react and react-moralis
 yarn add web3uikit >>> adds web3uikit to project
 yarn add --dev tailwindcss postcss autoprefixer >>> install tailwindcss
 yarn add --dev @openzeppelin/contracts >>> add OpenZeppelin contracts package to our project
+yarn add --dev @pinata/sdk >>> add pinata sdk to project
+yarn add --dev path >>> add path package to project (helps with file paths)
+yarn add --dev base64-sol >>> add base64-sol to project, for base64 encoding/decoding
 
 Hardhat:
 NOTE: npm and npx commands are both similar to yarn so they can both be replaced with yarn
@@ -48,6 +51,24 @@ yarn next export >>> generates static code; creates an out folder with all the f
 TailwindCSS:
 yarn tailwindcss init -p >>> initiates tailwindcss in our project
 
+Moralis:
+yarn global add moralis-admin-cli
+moralis-admin-cli >>> list of available commands
+moralis-admin-cli connect-local-devchain --chain hardhat --moralisSubdomain x64wiujxzejy.usemoralis.com --frpcPath ./frp/frpc >>> same as running ./frpc -c frpc.ini, but can be put into a script and can take api key and api secret from .env
+After running the above command, you will get Starting connection to Hardhat; you now need to go to Devchain Proxy Server on Moralis and hit the Disconnected button; it should turn into Connected
+
+
+For FRPC: download latest for your OS (linux for WSL): https://github.com/fatedier/frp/releases ; then extract frpc and frpc.ini into a folder; cd into that folder and modify frpc.ini as described in Devchain Proxy Server in moralis; then run:
+chmod +x frpc (gives frpc execution rights; you get Permission denied otherwise)
+./frpc -c frpc.ini
+
+Sample .env for moralis:
+moralisApiSecret=xxxxxxxxx
+moralisApiKey=xxxxxxxxxx
+moralisSubdomain=xxxxxxxxxxxx.usemoralis.com
+
+Set up Cloud Functions in IDE (requires moralis-admin-cli installed); instructions also available in servers -> Cloud Functions (near Dashboard and Plugins); moralisApiSecret and moralisApiKey can be removed if they are available in .env:
+moralis-admin-cli watch-cloud-folder --moralisApiKey xxxxxxxxx --moralisApiSecret xxxxxxxxx --moralisSubdomain xxxxxxxxx.usemoralis.com --autoSave 1 --moralisCloudfolder /path/to/cloud/folder
 
 
 Other:
@@ -62,6 +83,7 @@ yarn hardhat -> choose one of the options to create new project
 // add a bunch of useful dependencies; can be adjusted:
 yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv
 yarn hardhat compile -> after creating contract (.sol file)
+yarn add web3uikit moralis react-moralis
 
 Hardhat Starter Kit:
 git clone https://github.com/smartcontractkit/hardhat-starter-kit
@@ -79,5 +101,16 @@ Remote Development
 Remote - WSL
 Remote - SSH
 Remote - Containers
+
+
+
+Main function boilerplate:
+
+main()
+	.then(() => process.exit(0))
+	.catch((error) => {
+		console.error(error);
+		process.exit(1);
+	});
 
 
