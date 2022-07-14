@@ -19,6 +19,9 @@ yarn add --dev @openzeppelin/contracts >>> add OpenZeppelin contracts package to
 yarn add --dev @pinata/sdk >>> add pinata sdk to project
 yarn add --dev path >>> add path package to project (helps with file paths)
 yarn add --dev base64-sol >>> add base64-sol to project, for base64 encoding/decoding
+yarn add graphql >>> adds graphQL
+yarn add --dev @apollo/client >>> add appolo client
+
 
 Hardhat:
 NOTE: npm and npx commands are both similar to yarn so they can both be replaced with yarn
@@ -40,6 +43,9 @@ yarn hardhat coverage >>> generates a test coverage report; requires solidity-co
 yarn hardhat deploy >>> deploy contracts (requires hardhat-deploy plugin)
 yarn hardhat deploy --tags <tag> >>> deploy only scripts that have tag <tag>
 
+
+
+
 Frontend:
 
 NextJS:
@@ -48,15 +54,16 @@ yarn run dev >>> run app
 yarn build >> creates and optimized production build
 yarn next export >>> generates static code; creates an out folder with all the files
 
+
 TailwindCSS:
 yarn tailwindcss init -p >>> initiates tailwindcss in our project
+
 
 Moralis:
 yarn global add moralis-admin-cli
 moralis-admin-cli >>> list of available commands
 moralis-admin-cli connect-local-devchain --chain hardhat --moralisSubdomain x64wiujxzejy.usemoralis.com --frpcPath ./frp/frpc >>> same as running ./frpc -c frpc.ini, but can be put into a script and can take api key and api secret from .env
 After running the above command, you will get Starting connection to Hardhat; you now need to go to Devchain Proxy Server on Moralis and hit the Disconnected button; it should turn into Connected
-
 
 For FRPC: download latest for your OS (linux for WSL): https://github.com/fatedier/frp/releases ; then extract frpc and frpc.ini into a folder; cd into that folder and modify frpc.ini as described in Devchain Proxy Server in moralis; then run:
 chmod +x frpc (gives frpc execution rights; you get Permission denied otherwise)
@@ -71,9 +78,21 @@ Set up Cloud Functions in IDE (requires moralis-admin-cli installed); instructio
 moralis-admin-cli watch-cloud-folder --moralisApiKey xxxxxxxxx --moralisApiSecret xxxxxxxxx --moralisSubdomain xxxxxxxxx.usemoralis.com --autoSave 1 --moralisCloudfolder /path/to/cloud/folder
 
 
+TheGraph:
+yarn global add @graphprotocol/graph-cli >>> install graph cli; !!! MIGHT NOT WORK ON WSL/UBUNTU/LINUX !!! Use npm install instead if so
+npm install -g @graphprotocol/graph-cli
+graph init --studio <subgraph_name> >>> initialize subgraph
+graph codegen >>> generates a .ts file in generated folder, based on our schema.graphql file
+Auth & Deploy (also available in main subgraph page):
+graph auth --studio <deploy_key> >>> deploy_key can be found in main subgraph page
+graph codegen && graph build
+graph deploy --studio <subgraph_name>
+
 Other:
 
 yarn solhint <sol_filename>/*.sol (for all files ending in .sol) >>> linting plugin that verifies code; the process of linting is an analysis of the file for possible errors or bad practices (warnings); solhint is for Solidity and for Javascript there is ESLint
+
+
 
 
 Initial project setup:

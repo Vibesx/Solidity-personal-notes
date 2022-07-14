@@ -12,6 +12,9 @@ AAVE Liquidation
 aTokens
 OpCodes, low level Solidity, etc >>> https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-ii-creation-vs-runtime-6b9d60ecb44c/
 fallback and receive functions
+Upgrading your Smart Contracts >>> https://www.youtube.com/watch?v=bdXJmWajZRY&ab_channel=PatrickCollins
+Proxies >>> https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies /// https://docs.openzeppelin.com/contracts/4.x/api/proxy /// https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/proxy/Proxy.sol /// https://eips.ethereum.org/EIPS/eip-1967
+Yul (inline assembler language for Solidity) >>> https://docs.soliditylang.org/en/v0.8.15/yul.html
 
 
 Other notes:
@@ -34,7 +37,7 @@ DeFi
 
 
 Optional stuff to learn/consolidate:
-CSS, Bootstrap
+CSS, Bootstrap, TailwindCSS
 Short selling and Margin trading
 
 Note on ERC20 protocols (ex: AAVE):
