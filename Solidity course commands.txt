@@ -16,11 +16,14 @@ yarn add react react-dom moralis react-moralis >>> add react and react-moralis
 yarn add web3uikit >>> adds web3uikit to project
 yarn add --dev tailwindcss postcss autoprefixer >>> install tailwindcss
 yarn add --dev @openzeppelin/contracts >>> add OpenZeppelin contracts package to our project
+yarn add --dev @openzeppelin/hardhat-upgrades >>> add OpenZeppelin hardhat upgrades (for proxy dev for example)
 yarn add --dev @pinata/sdk >>> add pinata sdk to project
 yarn add --dev path >>> add path package to project (helps with file paths)
 yarn add --dev base64-sol >>> add base64-sol to project, for base64 encoding/decoding
 yarn add graphql >>> adds graphQL
 yarn add --dev @apollo/client >>> add appolo client
+
+
 
 
 Hardhat:
@@ -53,6 +56,9 @@ yarn create next-app (.) >>> creates a nextapp project (add . for current folder
 yarn run dev >>> run app
 yarn build >> creates and optimized production build
 yarn next export >>> generates static code; creates an out folder with all the files
+
+Typescript:
+yarn add --dev typescript typechain ts-node @typechain/ethers-v5 @typechain/hardhat @types/chai @types/node >>> add necessary typescript dependencies
 
 
 TailwindCSS:
@@ -87,6 +93,18 @@ Auth & Deploy (also available in main subgraph page):
 graph auth --studio <deploy_key> >>> deploy_key can be found in main subgraph page
 graph codegen && graph build
 graph deploy --studio <subgraph_name>
+
+
+Slither:
+pip3 intall solc-select >>> for auditing; if it gives an error related to PATH, copy solc and solc-select into /usr/bin/ (the initial install folder should be stated in the error)
+solc-select install <solidity_version> >>> installs given solidity version to be usable by solc-select
+solc-select use <solidity_version> >>> makes solc-select use a certain Solidity version (Slither will use this version)
+yarn slither >>> performs audit on ./contracts folder; this is a script defined in package.json, so it is customiseable
+
+Note: problems detected by Slither will come with a reference link to a description of the problem
+Red text = serious issues; Green text = minor issues or warnings
+
+
 
 Other:
 
