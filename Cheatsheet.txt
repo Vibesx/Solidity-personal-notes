@@ -1,0 +1,52 @@
+Javascript
+
+Main function boilerplate:
+
+main()
+	.then(() => process.exit(0))
+	.catch((error) => {
+		console.error(error);
+		process.exit(1);
+	});
+
+
+
+Get encoding in javascript:
+
+await contract.methods["deposit()"].request().then(v => v.data)
+
+
+
+
+Encode signature of function call and send transaction to a contract:
+
+functionSignature = {
+    name: 'proposeNewAdmin',
+    type: 'function',
+    inputs: [
+        {
+            type: 'address',
+            name: '_newAdmin'
+        }
+    ]
+}
+
+params = [player]
+
+data = web3.eth.abi.encodeFunctionCall(functionSignature, params)
+
+await web3.eth.sendTransaction({from: player, to: instance, data})
+
+
+
+
+
+
+
+Solidity
+
+Decode msg.data:
+
+(,,address origSender) = abi.decode(msgData[4:], (address, uint256, address));
+
+Don't forget that calldata from msg.data is prefixed by the 4-byte function signature! Luckily byte arrays located in calldata can be easily sliced in Solidity with brackets: [start:length]. In this case we'll skip the first 4 bytes and omit the length, this will default to return the full length. After removing the signature we can use abi.decode() on the leftover ABI encoded part of the byte array.

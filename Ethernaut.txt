@@ -1,0 +1,15 @@
+Ethernaut
+
+help() >>> help on what commands are available
+
+player	'current player address'
+ethernaut	'main game contract'
+level	'current level contract address'
+contract	'current level contract instance (if created)'
+instance	'current level instance contract address (if created)'
+version	'current game version'
+getBalance(address)	'gets balance of address in ether'
+getBlockNumber()	'gets current network block number'
+sendTransaction({options})	'send transaction util'
+getNetworkId()	'get ethereum network id'
+toWei(ether)	'convert ether units to wei'

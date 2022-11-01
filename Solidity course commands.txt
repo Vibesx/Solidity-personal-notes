@@ -22,6 +22,7 @@ yarn add --dev path >>> add path package to project (helps with file paths)
 yarn add --dev base64-sol >>> add base64-sol to project, for base64 encoding/decoding
 yarn add graphql >>> adds graphQL
 yarn add --dev @apollo/client >>> add appolo client
+yarn add styled-components >>> add styled-components, which is a library that helps with styling individual components in react
 
 
 
@@ -56,6 +57,9 @@ yarn create next-app (.) >>> creates a nextapp project (add . for current folder
 yarn run dev >>> run app
 yarn build >> creates and optimized production build
 yarn next export >>> generates static code; creates an out folder with all the files
+
+React:
+yarn create react-app <app_name> >>> creates a new react application in <app_name> folder
 
 Typescript:
 yarn add --dev typescript typechain ts-node @typechain/ethers-v5 @typechain/hardhat @types/chai @types/node >>> add necessary typescript dependencies
@@ -138,16 +142,3 @@ Remote Development
 Remote - WSL
 Remote - SSH
 Remote - Containers
-
-
-
-Main function boilerplate:
-
-main()
-	.then(() => process.exit(0))
-	.catch((error) => {
-		console.error(error);
-		process.exit(1);
-	});
-
-

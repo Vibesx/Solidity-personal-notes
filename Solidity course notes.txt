@@ -4,7 +4,7 @@ NatSpec (sort of Java documentations)
 Doxygen (NatSpec was inspired byb Doxygen)
 solc (command that auto-generates documentation based on NatSpec)
 Storage - check out github @ PatrickAlphaC/hardhat-fund-me-fcc   /contracts/exampleContracts/FunWithStorage.sol and /deploy/99-deploy-storage-fun.js; pay extra attention to understanding arrays and mappings (do some examples to better understand them)
-Hardhat network reference >>> http://hardhat.org/hardhat-networkk/reference/
+Hardhat network reference >>> https://hardhat.org/hardhat-network/docs/reference
 callstatic
 Better understand what network.provider is
 Listening to contract events on the frontend
@@ -17,6 +17,7 @@ Proxies >>> https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies /// https
 Yul (inline assembler language for Solidity) >>> https://docs.soliditylang.org/en/v0.8.15/yul.html
 DAO's, delegate, checkpoints
 Security & Audit
+Burner accounts and how to make/config them
 
 
 Other notes:
