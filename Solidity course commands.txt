@@ -13,6 +13,9 @@ yarn add --dev hardhat-deploy >>> deploy plugin
 yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers >>> replaces @nomiclabs/hardhat-ethers with hardhat-deploy-ethers
 yarn global add hardhat-shorthand >>> adds a package that allows us to write hh instead of hardhat in terminal commands; also provides autocomplete
 yarn add react react-dom moralis react-moralis >>> add react and react-moralis
+yarn add redux react-redux >>> add redux for react
+yarn add @reduxjs/toolkit >>> add redux toolkit   // note: redux is included in redux toolkit (react-redux is not though)
+yarn add react-router-dom (optionally followed by @<version> for a certain version or @latest for latest version) >>> add react router
 yarn add web3uikit >>> adds web3uikit to project
 yarn add --dev tailwindcss postcss autoprefixer >>> install tailwindcss
 yarn add --dev @openzeppelin/contracts >>> add OpenZeppelin contracts package to our project
