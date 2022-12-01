@@ -16,6 +16,7 @@ yarn add react react-dom moralis react-moralis >>> add react and react-moralis
 yarn add redux react-redux >>> add redux for react
 yarn add @reduxjs/toolkit >>> add redux toolkit   // note: redux is included in redux toolkit (react-redux is not though)
 yarn add react-router-dom (optionally followed by @<version> for a certain version or @latest for latest version) >>> add react router
+yarn add react-transition-group >>> add react transition group for transitions/animations in react
 yarn add web3uikit >>> adds web3uikit to project
 yarn add --dev tailwindcss postcss autoprefixer >>> install tailwindcss
 yarn add --dev @openzeppelin/contracts >>> add OpenZeppelin contracts package to our project
@@ -26,6 +27,7 @@ yarn add --dev base64-sol >>> add base64-sol to project, for base64 encoding/dec
 yarn add graphql >>> adds graphQL
 yarn add --dev @apollo/client >>> add appolo client
 yarn add styled-components >>> add styled-components, which is a library that helps with styling individual components in react
+yarn add mongodb >>> add mongodb
 
 
 
@@ -58,7 +60,7 @@ Frontend:
 NextJS:
 yarn create next-app (.) >>> creates a nextapp project (add . for current folder)
 yarn run dev >>> run app
-yarn build >> creates and optimized production build
+yarn build >> creates an optimized production build
 yarn next export >>> generates static code; creates an out folder with all the files
 
 React:
@@ -103,7 +105,7 @@ graph deploy --studio <subgraph_name>
 
 
 Slither:
-pip3 intall solc-select >>> for auditing; if it gives an error related to PATH, copy solc and solc-select into /usr/bin/ (the initial install folder should be stated in the error)
+pip3 install solc-select >>> for auditing; if it gives an error related to PATH, copy solc and solc-select into /usr/bin/ (the initial install folder should be stated in the error)
 solc-select install <solidity_version> >>> installs given solidity version to be usable by solc-select
 solc-select use <solidity_version> >>> makes solc-select use a certain Solidity version (Slither will use this version)
 yarn slither >>> performs audit on ./contracts folder; this is a script defined in package.json, so it is customiseable
